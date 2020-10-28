@@ -36,7 +36,11 @@ color:black;
 font-size:28px;
 }
 
+#services{
+height:100vh;
+}
 
+#portfolio{height:100vh;}
 
 .container-fluid .row .card{
   border:none;
