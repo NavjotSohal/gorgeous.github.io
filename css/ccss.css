@@ -132,7 +132,7 @@ left:35%;
 }
 
 #myBar{
-background:#24dced;
+background:#FF007F;;
 }
 
 /* The progress bar (scroll indicator) */
@@ -140,6 +140,7 @@ background:#24dced;
   height: 5px;
   background:;
   width: 0%;
+  background:#FF007F;
 }
 
 .btn.btn-primary{
