@@ -5,6 +5,7 @@ html {
 
 body{
 background: url("../img/bodybg.png");
+position: relative;
 }
 
 .navbar-default{
@@ -35,11 +36,7 @@ color:black;
 font-size:28px;
 }
 
-#services{
-height:100vh;
-}
 
-#portfolio{height:100vh;}
 
 .container-fluid .row .card{
   border:none;
@@ -75,10 +72,6 @@ height:380px;
   font-size:35px;
   font-weight: 900;
   color:white;
-}
-
-.carousel-inner{
-height:100vh;
 }
 
 .carousel-inner img {
@@ -135,7 +128,7 @@ left:35%;
 }
 
 #myBar{
-background:#FF007F;;
+background:#24dced;
 }
 
 /* The progress bar (scroll indicator) */
@@ -143,7 +136,6 @@ background:#FF007F;;
   height: 5px;
   background:;
   width: 0%;
-  background:#FF007F;
 }
 
 .btn.btn-primary{
@@ -206,7 +198,23 @@ transform: scale(1); }
 .galimg{
   border:5px solid white;
 }
+@media (max-width: 450px) {
+.gallery {
+-webkit-column-count: 1;
+-moz-column-count: 1;
+column-count: 1;
+-webkit-column-width: 100%;
+-moz-column-width: 100%;
+column-width: 100%;
+}
+}
 
+@media (max-width: 400px) {
+.btn.filter {
+padding-left: 1.1rem;
+padding-right: 1.1rem;
+}
+}
 
 @media (max-width: 700px){
 .nav-item{
