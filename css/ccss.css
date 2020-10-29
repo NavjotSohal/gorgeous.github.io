@@ -158,10 +158,6 @@ transform: translateY(-50%);
 
 }
 
-.jumbotron .mt-5{
-  height:100vh;
-}
-
 img.demo {
   opacity: 0.6;
 }
