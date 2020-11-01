@@ -4,11 +4,13 @@ html {
 }
 
 body{
-overflow-x: hidden;
+background-color:#DFDDDE; 
 }
+
 
 .navbar-default{
 background-color:white;
+height:80px;
 }
 
 .navbar-nav .nav-item .nav-link{
