@@ -4,7 +4,7 @@ html {
 }
 
 body{
-background-color:#F6F4F5; 
+background-color:#F6F4F5;
 }
 
 
@@ -124,8 +124,7 @@ left:35%;
   width: 100%;
   height: 5px;
   background: none;
-  top: 90px;
-  z-index: 1;
+  z-index: 999;
 }
 
 #myBar{
