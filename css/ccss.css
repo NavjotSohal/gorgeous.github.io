@@ -5,22 +5,26 @@ html {
 
 body{
 background-color:#F6F4F5;
+font-family: font-family: 'Aladin', cursive;
 }
 
 
 .navbar{
 box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);
-
 }
 
+#appointments{
+font-family:'Aladin', cursive;
+
+}
 .container-fluid{
 margin: auto;
 
 }
 
 .navbar-default{
-background-color:white;
 height:80px;
+background-color:white;
 }
 
 .navbar-nav .nav-item .nav-link{
@@ -80,9 +84,10 @@ height:380px;
 }
 
 .card-title{
-  font-size:35px;
+  font-size:29px;
   font-weight: 900;
   color:white;
+  text-align:center;
 }
 
 .carousel-inner img {
@@ -114,11 +119,6 @@ cursor:pointer;
   line-height: 1em;
 }
 
-.container-fluid{
-font-family: 'Aladin', cursive;
-color:white;
-margin-top: 50px;
-}
 
 .btn
 {
@@ -155,11 +155,21 @@ background:none;
 font-family: 'Itim', cursive;
 }
 
+#services{
+font-family: 'Aladin', cursive;
+}
+#aboutus{
+font-family: 'Aladin', cursive;
+}
+
+
+
 .card-img{
 box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);
 }
 .card-text.align-middle{
 font-size:19px;
+color:white;
 font-family: 'Patrick Hand', cursive;
 margin:0;
 position: absolute;
@@ -231,5 +241,13 @@ padding-right: 1.1rem;
 .nav-item{
 text-align:center;
 font-size: 20px;
+background:white;
+}
+}
+
+@media (max-width: 768px) {
+html, body {
+width: auto !important;
+overflow-x: hidden !important;
 }
 }
