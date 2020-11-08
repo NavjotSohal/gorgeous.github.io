@@ -4,6 +4,7 @@ html {
 }
 
 body{
+  width:100%;
 background-color:#ECEAE2;
 font-family: font-family: 'Aladin', cursive;
 }
@@ -38,6 +39,17 @@ color:black;
 margin-top: 20px;
 margin-bottom: 20px;
 }
+
+.card-deck{
+overflow-y:hidden;
+}
+
+.services-div{
+display: flex;
+flex-wrap: wrap;
+background: none;
+}
+
 
 .auimgs{
 height:250px;
@@ -84,7 +96,7 @@ height:380px;
 }
 
 .card-title{
-  font-size:29px;
+  font-size:32px;
   font-weight: 900;
   color:white;
   text-align:center;
@@ -132,7 +144,7 @@ left:35%;
 .progress-container {
   position: fixed;
   width: 100%;
-  top:90px;
+  top:80px;
   height: 5px;
   background: none;
   z-index: 99999;
