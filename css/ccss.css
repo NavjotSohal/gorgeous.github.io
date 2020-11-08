@@ -40,16 +40,6 @@ margin-top: 20px;
 margin-bottom: 20px;
 }
 
-.card-deck{
-overflow-y:hidden;
-background: none;
-}
-
-.services-div{
-display: flex;
-flex-wrap: wrap;
-background: none;
-}
 
 
 .auimgs{
