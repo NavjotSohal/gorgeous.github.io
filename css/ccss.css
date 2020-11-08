@@ -9,10 +9,28 @@ html {
 }
 
 body{
-  width:100%;
-background-color:#ECEAE2;
 font-family: font-family: 'Aladin', cursive;
 }
+
+.bookingbtn{
+background:none;
+border:none;
+background-color: #33ccff;
+color:white !important;
+border-radius:25px;
+width:110px;
+font-size:15px;
+height:44px;
+
+
+
+}
+
+.form-book-btn{
+margin-top:30px;
+
+}
+
 
 
 .navbar{
@@ -103,24 +121,24 @@ height:380px;
     height: 100%;
   }
 
-.social-icons{
-position: fixed;
-bottom:2%;
-right:10px;
-background:white;
-border-radius:25px;
-width:55px;
-box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);
+
+.sdiv{
+  margin-top:50px;
+  text-align:center;
+  font-weight:700;
 }
 
-.social-icons-div{
-margin-top: 10px;
+.social{
+  margin-top:100px;
+}
+
+.social-p{
 text-align: center;
+font-weight: 400;
+font-size: 1.5rem;
+
 }
 
-.social-icons-clickable{
-cursor:pointer;
-}
 
 .card-title .letter {
   display: inline-block;
@@ -251,12 +269,13 @@ padding-right: 1.1rem;
 }
 
 @media (max-width: 700px){
-.nav-item{
+.nav-item {
 text-align:center;
 font-size: 20px;
 background:white;
 }
 }
+
 
 @media (max-width: 700px) {
 html, body {
