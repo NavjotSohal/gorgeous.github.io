@@ -42,6 +42,7 @@ margin-bottom: 20px;
 
 .card-deck{
 overflow-y:hidden;
+background: none;
 }
 
 .services-div{
@@ -157,9 +158,15 @@ background:#FF007F;
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 5px;
-  background:;
+  background: #4caf50;
   width: 0%;
 }
+
+
+
+
+
+
 
 .btn.btn-primary{
 border:2px solid white;
