@@ -46,15 +46,13 @@ margin-top: 20px;
 margin-bottom: 20px;
 }
 
-.abt-div{
-  display: flex;
-}
 .auimgs{
 height:250px;
 width:250px;
 background:none;
 border-radius:25px;
 margin: 0px auto;
+
 }
 .aboutustxt{
 color:black;
@@ -265,7 +263,7 @@ height:280px;
 width:250px;
 text-align:center;
 margin:0px 15px;
-border:1px solid black ;
+border:2px solid white ;
 }
 
 .compli-imgs{
