@@ -63,6 +63,9 @@ font-weight:500;
 margin:15px 0 15px;
 }
 
+.dslr{
+transform: rotate(50deg);
+}
 
 
 
@@ -181,8 +184,8 @@ text-align:center;
 
 
 .btn.btn-primary{
-border:2px solid white;
-background:none;
+border:1px solid white;
+background:;
 font-family: 'Itim', cursive;
 }
 
@@ -252,8 +255,37 @@ transform: scale(1); }
   -webkit-box-shadow: 10px 10px 102px -20px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 102px -20px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 102px -20px rgba(0,0,0,0.75);
+}
+
+
+
+
+.compliments-card{
+height:280px;
+width:250px;
+text-align:center;
+margin:0px 15px;
+border:1px solid black ;
+}
+
+.compli-imgs{
+  height:140px;
+  width: 120px;
+}
+
+.ratings{
+   color:#ffdf00;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+   margin: 0 5px;
+}
+
+.ratings-text{
+font-family: 'Patrick Hand', cursive;
 
 }
+
+
 @media (max-width: 450px) {
 .gallery {
 -webkit-column-count: 1;
