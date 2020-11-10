@@ -62,9 +62,14 @@ margin:15px 0 15px;
 }
 
 .dslr{
-transform: rotate(50deg);
+transform: rotate(70deg);
 }
 
+.navbar-brand{
+  font-family: 'Dancing Script', cursive;
+  font-size:40px;
+  color:#24dced;
+}
 
 
 .container-fluid .row .card{
@@ -167,6 +172,50 @@ background:#FF007F;
 display: flex;
 }
 
+.newsletter-div{
+position: relative;
+background:#EBEFF3;
+height:100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content:center;
+
+}
+
+#newsletter{
+  top:40%;
+  width:80%;
+  outline:none;
+  margin: 0px auto;
+  height:45px;
+  background:white;
+  border-radius:5px;
+  border:2px solid black;
+  text-align: center;
+  font-family: 'Bad Script', cursive;
+  font-size:18px;
+  font-weight:bold;
+
+}
+
+.sbs-btn{
+border:none;
+outline:none;
+background:#89D400;
+color:white;
+border-radius:10px;
+height:41px;
+width:100px;
+align-self:center;
+margin-top:10px;
+}
+
+.sbs-btn:hover{
+text-decoration: underline;
+}
+
+
 .btnbook{
 border:none;
 color:white;
@@ -176,18 +225,19 @@ border-radius:10px;
 margin: 0px auto
 }
 
-select{
-text-align:center;
+h5{
+margin-bottom:30px;
+padding-bottom:15px;
+border-bottom: 3px solid black;
 }
 
-
 .btn.btn-primary{
-
 font-family: 'Itim', cursive;
+border:1px solid white;
 }
 
 .btn.btn-primary:hover{
-border:2px solid white;
+border:3px solid white;
 font-family: 'Itim', cursive;
 }
 
@@ -256,7 +306,7 @@ box-shadow: 10px 10px 102px -20px rgba(0,0,0,0.75);
 .compliments-card{
 text-align:center;
 margin:0px 15px;
-border:2px solid #24dced ;
+border:2px solid gray ;
 }
 
 .compli-imgs{
@@ -334,5 +384,11 @@ overflow-x: hidden !important;
 @media (max-width: 650px){
 #logo{
     height:70px;
+  }
+}
+
+@media (max-width:650px){
+#address-div{margin-top:60px;
+
   }
 }
