@@ -389,6 +389,11 @@ overflow-x: hidden !important;
 
 @media (max-width:650px){
 #address-div{margin-top:60px;
+  }
+}
 
+@media (max-width:650px){
+  .navbar-brand{
+    font-size:32px;
   }
 }
