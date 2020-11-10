@@ -88,7 +88,7 @@
 }
 .slick-slide img
 {
-    display: block;
+
 }
 .slick-slide.slick-loading img
 {
@@ -115,5 +115,5 @@
     border: 1px solid transparent;
 }
 .slick-arrow.slick-hidden {
-    display: none;
+    color:black;
 }
