@@ -9,7 +9,7 @@ html {
 }
 
 body{
-font-family: font-family: 'Aladin', cursive;
+font-family:'Aladin', cursive;
 }
 
 .form-book-btn{
@@ -256,7 +256,7 @@ box-shadow: 10px 10px 102px -20px rgba(0,0,0,0.75);
 .compliments-card{
 text-align:center;
 margin:0px 15px;
-border:2px solid white ;
+border:2px solid #24dced ;
 }
 
 .compli-imgs{
@@ -271,8 +271,18 @@ border:2px solid white ;
    margin: 0 5px;
 }
 
+#servicecards{
+  margin-top:20px;
+}
+
 .ratings-text{
 font-family: 'Patrick Hand', cursive;
+}
+
+.services-box{
+display: flex;
+justify-content: space-around;
+flex-wrap:wrap;
 
 }
 
@@ -312,5 +322,17 @@ overflow-x: hidden !important;
 @media (max-width: 650px){
   #spotlight, #dslr{
     display: none;
+  }
+}
+@media (max-width: 650px){
+#servicecards{
+  margin:0px auto;
+  margin-top:15px;
+}
+}
+
+@media (max-width: 650px){
+#logo{
+    height:70px;
   }
 }
