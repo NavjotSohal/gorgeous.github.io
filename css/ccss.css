@@ -474,7 +474,10 @@ border:0.5px solid gray ;
 #servicecards{
   margin-top:20px;
 }
-
+.carousel-item{
+height:95vh;
+min-height: 300px;
+}
 .slider-small{
 display: none;
 }
