@@ -13,16 +13,17 @@ font-family:'Aladin', cursive;
 }
 
 [type=radio] {
+  background:none;
   display:inline;
   align-self: flex-end;
   z-index:99999;
 }
 
 #slider {
-  height: 35vw;
+  height: 39vw;
   padding:5px;
   position: relative;
-  perspective: 1000px;
+  perspective: 1920px;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
@@ -42,45 +43,45 @@ font-family:'Aladin', cursive;
 #s1:checked ~ #slide4, #s2:checked ~ #slide5,
 #s3:checked ~ #slide1, #s4:checked ~ #slide2,
 #s5:checked ~ #slide3 {
-  -webkit-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-  -moz-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-  box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
   transform: translate3d(-30%,0,-200px);
 }
 
 #s1:checked ~ #slide5, #s2:checked ~ #slide1,
 #s3:checked ~ #slide2, #s4:checked ~ #slide3,
 #s5:checked ~ #slide4 {
-  -webkit-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-  -moz-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-  box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
   transform: translate3d(-15%,0,-100px);
 }
 
 #s1:checked ~ #slide1, #s2:checked ~ #slide2,
 #s3:checked ~ #slide3, #s4:checked ~ #slide4,
 #s5:checked ~ #slide5 {
-  -webkit-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
--moz-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
   transform: translate3d(0,0,0);
 }
 
 #s1:checked ~ #slide2, #s2:checked ~ #slide3,
 #s3:checked ~ #slide4, #s4:checked ~ #slide5,
 #s5:checked ~ #slide1 {
-  -webkit-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
--moz-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
   transform: translate3d(15%,0,-100px);
 }
 
 #s1:checked ~ #slide3, #s2:checked ~ #slide4,
 #s3:checked ~ #slide5, #s4:checked ~ #slide1,
 #s5:checked ~ #slide2 {
-  -webkit-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
--moz-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
-box-shadow: -5px 11px 81px 8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
   transform: translate3d(30%,0,-200px);
 }
 
