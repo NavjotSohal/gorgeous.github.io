@@ -20,17 +20,14 @@ font-family:'Aladin', cursive;
 }
 
 #slider {
-  height: 35vw;
+  height: 38vw;
   padding-top:40px;
   position: relative;
-  perspective: 1920px;
+  perspective: 1500px;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
 }
-
-
-
 
 .menu {
   background-color: transparent;
@@ -73,19 +70,6 @@ font-family:'Aladin', cursive;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #slider label {
   margin: auto;
@@ -475,7 +459,7 @@ border:0.5px solid gray ;
   margin-top:20px;
 }
 .carousel-item{
-height:95vh;
+height:90vh;
 min-height: 300px;
 }
 .slider-small{
@@ -536,12 +520,7 @@ overflow-x: hidden !important;
     display: none;
   }
 }
-@media (max-width: 650px){
-#servicecards{
-  margin:0px auto;
-  margin-top:15px;
-}
-}
+
 
 @media (max-width:650px){
 #address-div{margin-top:60px;
