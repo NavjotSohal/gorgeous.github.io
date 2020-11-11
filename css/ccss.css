@@ -364,13 +364,13 @@ border:none;
 color:white;
 height:40px;
 width:60%;
-background:#FF55A2;
+background:#e60068;
 border-radius:10px;
 margin: 0px auto
 }
 
 .btnbook:hover{
-background:#e60068;
+text-decoration: underline;
 }
 
 
@@ -475,6 +475,10 @@ border:0.5px solid gray ;
   margin-top:20px;
 }
 
+.slider-small{
+display: none;
+}
+
 .ratings-text{
 font-family: 'Patrick Hand', cursive;
 }
@@ -551,4 +555,16 @@ overflow-x: hidden !important;
 @media (max-width:650px){
   [type=radio] {
   display:none;}
+}
+
+@media (max-width:650px){
+#slider {
+  display: none;
+  }
+}
+
+@media (max-width:650px){
+.slider-small{
+      display: block;
+  }
 }
