@@ -479,6 +479,11 @@ border:0.5px solid gray ;
 display: none;
 }
 
+.small-slider-controls{
+display: none;
+
+}
+
 .ratings-text{
 font-family: 'Patrick Hand', cursive;
 }
