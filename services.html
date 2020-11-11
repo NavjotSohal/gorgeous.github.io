@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+        <head>
+
+                      <meta charset="utf-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <title>gorgeous.in</title>
+                            <link rel="icon" href="img/favicon.png">
+                            <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+                            <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+                            <link rel="stylesheet" href="css/ccss.css">
+                            <link rel="stylesheet" href="css/aos.css">
+                            <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+                            <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+                            <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+                            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+                            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+                            <link rel="stylesheet" href="css/slick-theme.css">
+                            <link rel="stylesheet" href="css/slick.css">
+                            <style media="screen">
+
+
+
+html{
+scroll-behavior: smooth;
+}
+
+
+body{
+height: 100%;
+margin: 0;
+}
+
+
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
+position: relative;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.bgimg-1 {
+background-image: url("../img/llgb1.jpg");
+width: 100%;
+min-height: 500px;
+}
+
+.bgimg-2 {
+background-image: url("../img/llgb2.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-3 {
+background-image: url("../img/llgb3.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-4 {
+background-image: url("../img/llgb4.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-5 {
+background-image: url("../img/llgb5.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-6 {
+background-image: url("../img/llgb6.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-7 {
+background-image: url("../img/llgb7.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-8 {
+background-image: url("../img/llgb8.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-9 {
+background-image: url("../img/llgb9.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+h3 {
+letter-spacing: 5px;
+text-transform: uppercase;
+font: 20px "Lato", sans-serif;
+color: #111;
+}
+
+.texts{
+  text-align: center;
+  color:white;
+  font-family:'Aladin', cursive;
+  font-size: 50px;
+  padding: 300px 0px;
+  -webkit-text-stroke: 2px black;
+}
+
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 9999; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #FF7800; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover{
+background:#FFD301;
+}
+
+@keyframes scroll_2 {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(.75em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+@keyframes scroll {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(1em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.scroll-icon__dot {
+  display: block;
+  position: absolute;
+  left: 40%;
+  background:#24dced;
+  height: 15px;
+  width: 15px;
+  top: .6em;
+  margin-left: -.25em;
+  border-radius: 50%;
+  transform-origin: top center;
+  backface-visibility: hidden;
+  animation: scroll 2s ease-out infinite;
+}
+
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 75px;
+  width: 50px;
+  border: 5px solid #e60068;
+  border-radius: 1.5em;
+
+}
+
+.page-wrap {
+  display: flex;
+  height: 60vh;
+}
+
+.example {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px){
+  .small-only {
+    display: none!important;
+  }
+}
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 320px) {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
+  background-attachment: scroll;
+}
+}
+
+</style>
+        </head>
+
+        <body style="background:#EBEFF3;">
+
+        <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+        </div>
+
+
+        <nav class="navbar navbar-default navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl navbar-expand-xs fixed-top" id="main-nav">
+
+        <a class="navbar-brand" href="index.html">Gorgeous.in<img src="img/favicon.png" height="50px" width="60px"/></a>
+        <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+          <ul class="navbar-nav ml-auto" style="font-size:20px;font-family: 'Aladin', cursive;font-weight:400;">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#appointments">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#aboutus">About Us</a>
+          </li>
+        </ul>
+
+        </nav>
+
+
+        <div class="container-fluid services-container" style="margin-top:80px;">
+
+
+          <div class="page-wrap bgimg-1">
+            <section class="example example--2">
+              <span class="scroll-icon">
+                <span class="scroll-icon__dot"></span>
+              </span>
+            </section>
+          </div>
+
+                <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+                  <h3 style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Services We Offer</font></font></h3>
+                  <p style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                </div>
+
+                <div class="bgimg-2" id="wedding-markover">
+                  <div class="texts">Wedding Makeover</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Get the best wedding
+                                                    makeup from experts.
+                                                    Select the best fashion
+                                                    according to your
+                                                    choice.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-3" id="hair-care">
+                  <div class="texts">Hair Care & Styling</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The proper hair care
+                                                    plans selected by the experts.
+                                                    Try first, then apply
+                                                    with our virtual hair guide
+                                                    choice.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-4" id="moyp">
+                  <div class="texts">Makeover @ Your Place</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Our artists will head straight
+                                                    to your place, to give you the
+                                                    bestest beauty treatment, never
+                                                    experienced before.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-5" id="beauty-facials">
+                  <div class="texts">Beauty Facials</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Over 130 skin refreshing
+                                                    facials.Carefully categorized
+                                                    for every skin type.
+                                                    With skin security tests.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-6" id="nail-fashions">
+                  <div class="texts">Nail Fashions</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Choose from more than
+                                                   100K Nail arts designs for your
+                                                   fashion.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-7" id="ayurvedic-baths">
+                  <div class="texts">Ayurvedic Baths</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beauty and wellness rich
+                                                    Ayurvedic Baths to
+                                                    Sooth your mind from
+                                                    busy life routine.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-8" id="stress-cure-therpies">
+                  <div class="texts">Stress Cure Therpies</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reduce your aging effects
+                                                  with our various anti-stress
+                                                  therpies sessions. Get the
+                                                  well planned guidiance from
+                                                  our doctors.</font></font></p>
+                  </div>
+                </div>
+
+                <div class="bgimg-9" id="tatoo-arts">
+                  <div class="texts">Tatoo Arts</div>
+                </div>
+
+                <div style="position:relative;">
+                  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Special Grade skin
+                                                    friendly tatoo inks.
+                                                    created by Tatoo experts.
+                                                    Get your Inked Memory today!</font></font></p>
+                  </div>
+                </div>
+
+        </div>
+
+
+
+
+
+        <!-- Social media icons starts from here -->
+        <div class="container social">
+                    <p class="social-p">Connect with us:</p>
+                  <div class="row" data-aos="zoom-in" data-aos-duration="1000">
+
+                                <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 sdiv"><i class="fa fa-whatsapp fa-4x" aria-hidden="true" style="color:#4FCE5D"></i></i><p>+91-9876543210</p></div>
+                                <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 sdiv"><i class="fa fa-facebook fa-4x" aria-hidden="true" style="color:#3b5998"></i><p>gorgeous_salons</p></div>
+                                <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 sdiv"><i class="fa fa-instagram fa-4x" aria-hidden="true" style="color:#CA3AB0"></i><p>@gorgeous_salons</p></div>
+                                <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 sdiv"><i class="fa fa-snapchat-ghost fa-4x" aria-hidden="true" style="color:#dedc12"></i><p>gorgeous_salons</p></div>
+                  </div>
+        </div>
+
+
+        <!-- Social media icons ends from here -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container mt-4">
+          <div class="row">
+              <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center" data-aos="zoom-in" data-aos-duration="1500" id="address-div">
+                     <i class="fa fa-mobile fa-3x" aria-hidden="true" style="color:black;"></i><h5>Manager: +91-9876543210</h5>
+                     <i class="fa fa-mobile fa-3x" aria-hidden="true" style="color:black;"></i><h5>Franchisee: +91-9876543210</h5>
+                     <i class="fa fa-envelope-o fa-2x" aria-hidden="true" style="color:black;"></i><h5>info@gorgeous_salons.in</h5>
+              </div>
+
+               <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7" id="address-div">
+                     <div class="newsletter-div">
+                          <input type="email" name="email" placeholder="subscribe to our news letter" id="newsletter" data-aos="slide-left" data-aos-duration="1500"/>
+
+                            <button type="button" name="button" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000">Subscribe</div>
+
+                     </div>
+               </div>
+           </div>
+         </div>
+
+
+         <br>
+         <br>
+         <br>
+         <br>
+
+
+
+         <!--footer starts from here-->
+
+         <div class="container-fluid text-center pb-3">
+         <p class="footer" data-aos="slide-up" data-aos-anchor-placement="top" data-aos-duration="1500">Designed with</p>
+         <i class="fa fa-heart fa-2x" aria-hidden="true" style="color:#FF007F;" data-aos="zoom-in" data-aos-anchor-placement="top" data-aos-duration="1500"></i>&nbsp
+          <p class="text-center footer" data-aos="slide-up" data-aos-anchor-placement="top" data-aos-duration="1500"><span style="font-size:12px;">-Navjot Sohal</span></p>
+        </div>
+
+
+           <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-circle-up fa-2x" aria-hidden="true"></i></button>
+
+
+           <!-- scripts starts from here -->
+           <script src="js/scrollbar.js" type="text/javascript"></script>
+           <script src="js/jquery.min.js" type="text/javascript"></script>
+           <script src="js/bootstrap.js" type="text/javascript"></script>
+           <script src="js/aos.js" type="text/javascript"></script>
+           <script src="js/slick.js" type="text/javascript"></script>
+           <script type="text/javascript" src="js/slick.min.js"></script>
+
+
+
+        <script>
+          AOS.init();
+        </script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+        <script>
+        mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+        </script>
+
+
+        <!-- scripts starts from here -->
+
+          </body>
+        </html>
