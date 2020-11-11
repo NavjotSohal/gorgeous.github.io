@@ -489,3 +489,8 @@ overflow-x: hidden !important;
     text-align:center;
   }
 }
+
+@media (max-width:650px){
+  [type=radio] {
+  display:none;}
+}
