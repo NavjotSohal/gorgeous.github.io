@@ -28,10 +28,14 @@ scroll-behavior: smooth;
 
 
 body{
+font-family:'Aladin', cursive;
 height: 100%;
 margin: 0;
 }
 
+.modal-title{
+  font-family:'Aladin', cursive;
+}
 
 
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
@@ -117,7 +121,7 @@ color: #111;
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  right: 10px; /* Place the button 30px from the right */
   z-index: 9999; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none;
@@ -401,10 +405,9 @@ color: #111;
 
                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7" id="address-div">
                      <div class="newsletter-div">
-                          <input type="email" name="email" placeholder="subscribe to our news letter" id="newsletter" data-aos="slide-left" data-aos-duration="1500"/>
+                       <input type="email" name="email" placeholder="subscribe to our news letter" id="newsletter" data-aos="slide-left" data-aos-duration="1500" autocomplete="off"/>
 
-                            <button type="button" name="button" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000">Subscribe</div>
-
+                         <button type="button" data-toggle="modal" data-target="#Newsletter" name="button" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000" onclick="NewsLetterEmail();">Subscribe</button>
                      </div>
                </div>
            </div>
@@ -430,6 +433,32 @@ color: #111;
            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-circle-up fa-3x" aria-hidden="true"></i></button>
 
 
+           <!--News Letter Modal -->
+
+           <div id="Newsletter" class="modal fade" role="dialog">
+             <div class="modal-dialog">
+
+               <!-- Modal content-->
+               <div class="modal-content">
+                 <div class="modal-header">
+                 <h3 class="modal-title text-left"><span><i class="fa fa-info-circle" aria-hidden="true" style="color:#4FBE19;margin-right:10px;"></i></i></span></span>Message</h3>
+                   <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                 </div>
+                 <div class="modal-body">
+                   <p class="text-center h3"><strong>Subscription Added  !<i class="fa fa-paper-plane" style="color:#fca903;margin-left:10px;" aria-hidden="true"></i></strong></p>
+                   <p class="p-tags-booking">Offers</p>
+                   <p class="p-tags-booking">Wellness Tips</p>
+                   <p class="p-tags-booking">A lot of Gossips</p>
+                   <p class="p-tags-booking">Newsletter will be sent on <span id="DisplayEmail" class="bookingspans text-center"></span>weekly.</p>
+
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <!-- newsLetter modal ends Here -->
+
+
            <!-- scripts starts from here -->
            <script src="js/scrollbar.js" type="text/javascript"></script>
            <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -444,6 +473,16 @@ color: #111;
           AOS.init();
         </script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script>
+
+
+function NewsLetterEmail(){
+document.getElementById('DisplayEmail').innerHTML = document.getElementById("newsletter").value;
+}
+</script>
+
+
 
         <script>
         mybutton = document.getElementById("myBtn");
@@ -465,7 +504,18 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
         </script>
+        <script>
 
+        $('#BookingModal').on('hidden.bs.modal', function () {
+          $('body').find('#bookform').trigger('reset');
+        })
+
+        $('#Newsletter').on('hidden.bs.modal', function () {
+          $('body').find('#newsletter').trigger('reset');
+          $('input[name=email]').val("")
+        })
+
+        </script>
 
         <!-- scripts starts from here -->
 
