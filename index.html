@@ -570,9 +570,9 @@
       </div>
       <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7" id="address-div">
             <div class="newsletter-div">
-                 <input type="email" name="email" placeholder="subscribe to our news letter" id="newsletter" data-aos="slide-left" data-aos-duration="1500"/>
+                 <input type="email" name="email" placeholder="subscribe to our news letter" id="newsletter" data-aos="slide-left" data-aos-duration="1500" autocomplete="off"/>
 
-                   <button type="button" name="button" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000">Subscribe</button>
+                   <button type="button" data-toggle="modal" data-target="#Newsletter" name="button" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000" onclick="NewsLetterEmail();">Subscribe</button>
 
             </div>
       </div>
@@ -630,6 +630,33 @@
   </div>
 </div>
 
+
+<!--News Letter Modal -->
+
+<div id="Newsletter" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      <h3 class="modal-title text-left"><span><i class="fa fa-info-circle" aria-hidden="true" style="color:#4FBE19;margin-right:10px;"></i></i></span></span>Message</h3>
+        <button type="button" class="close" data-dismiss="modal" >&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center h3"><strong>Subscription Added  !<i class="fa fa-paper-plane" style="color:#fca903;margin-left:10px;" aria-hidden="true"></i></strong></p>
+        <p class="p-tags-booking">Offers</p>
+        <p class="p-tags-booking">Wellness Tips</p>
+        <p class="p-tags-booking">A lot of Gossips</p>
+        <p class="p-tags-booking">Newsletter will be sent on <span id="DisplayEmail" class="bookingspans text-center"></span>weekly.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- newsLetter modal ends Here -->
+
+
 <script>
 
 
@@ -640,7 +667,14 @@ function BookingConfirmed() {
   document.getElementById('ShowService').innerHTML = document.getElementById("ServiceReg").value;
   document.getElementById('ShowPrefTime').innerHTML = document.getElementById("PrefTime").value;
 }
- </script>
+
+
+function NewsLetterEmail(){
+document.getElementById('DisplayEmail').innerHTML = document.getElementById("newsletter").value;
+}
+
+</script>
+
 
 
 <script>
@@ -648,6 +682,15 @@ function BookingConfirmed() {
 $('#BookingModal').on('hidden.bs.modal', function () {
   $('body').find('#bookform').trigger('reset');
 })
+
+$('#Newsletter').on('hidden.bs.modal', function () {
+  $('body').find('#newsletter').trigger('reset');
+  $('input[name=email]').val("")
+})
+
+</script>
+
+<script>
 
 </script>
 
