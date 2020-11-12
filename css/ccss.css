@@ -483,6 +483,22 @@ justify-content: space-around;
 flex-wrap:wrap;
 }
 
+.modal-dialog{
+  padding: 200px 0px;
+}
+
+.bookingspans{
+font-weight: 500;
+font-size:20px;
+text-decoration:underline;
+margin:0px 5px;
+color:black;
+}
+.p-tags-booking{
+color:gray;
+font-size:15px;
+text-align: center;
+}
 
 
 @media screen and (min-width: 768px){

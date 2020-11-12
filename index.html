@@ -330,41 +330,41 @@
                               <form class="form-inline">
                               <div class="form-group">
                               <label for="email">Name</label>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" id="PersonName">
                               <label for="mobile">Mobile</label>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" id="PersonMobile">
                             </form>
                               </div>
                               <div class="form-group">
                                 <label for="service">Service at</label>
-                              <select class="form-control">
-                                       <option>Salon Central Town</option>
-                                       <option>Salon Modal Town</option>
-                                       <option>Home</option>
+                              <select class="form-control" id="ServiceAt">
+                                       <option value="Salon Central Town">Salon Central Town</option>
+                                       <option value="Salon Model Town">Salon Model Town</option>
+                                       <option value="Home">Home</option>
                               </select>
                             </div>
                               <div class="form-group">
                               <label for="service">Service</label>
-                              <select class="form-control">
-                                       <option>Bridal Makeover</option>
-                                       <option>Hair Care</option>
-                                       <option>Makeup at Home</option>
-                                       <option>Beauty facials</option>
-                                       <option>Nail Fashions</option>
-                                       <option>Tatoo Art</option>
+                              <select class="form-control" id="ServiceReg">
+                                       <option value="Bridal Makeover">Bridal Makeover</option>
+                                       <option value="Hair Care">Hair Care</option>
+                                       <option value="Makeup At Home">Makeup At Home</option>
+                                       <option value="Beauty Facials">Beauty facials</option>
+                                       <option value="Nail Fashions">Nail Fashions</option>
+                                       <option value="Tatoo Art">Tatoo Art</option>
                               </select>
                               </div>
                               <div class="form-group">
                               <label for="service">Prefered Time</label>
-                              <select class="form-control">
-                                       <option>Morning</option>
-                                       <option>Evening</option>
+                              <select class="form-control" id="PrefTime">
+                                       <option value="Morning">Morning</option>
+                                       <option value="Evening">Evening</option>
 
                               </select>
 
                               </div>
                               <div class="form-group bookbtn-div">
-                                 <input type="submit" class="btnbook" style="" value="Book"/>
+                                 <button type="submit" class="btnbook" data-toggle="modal" data-target="#BookingModal" onclick="BookingConfirmed();">Book</button>
                               </div>
 
                           </form>
@@ -607,6 +607,41 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 
 
+<!-- Modal -->
+<div id="BookingModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      <h3 class="modal-title text-left"><span><i class="fa fa-info-circle" aria-hidden="true" style="color:#4FBE19;margin-right:10px;"></i></i></span></span>Message</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center h3"><strong>Booking Confirmed  !<i class="fa fa-thumbs-o-up" style="color:#e60068;margin-left:10px;" aria-hidden="true"></i></strong></p>
+
+        <p class="p-tags-booking">Thanks...<span id="ShowPersonName" class="bookingspans text-center"></span></p>
+        <p class="p-tags-booking">We had received your booking for prefered time<span id="ShowPrefTime" Class="bookingspans"></span> of service<span id="ShowService" Class="bookingspans"></span> at<span id="ShowServiceAt" class="bookingspans"></span></p>
+        <p class="text-center mt-2 p-tags-booking">Our associate will call you shortly on <span id="ShowPersonMobile" Class="bookingspans"></span></p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+function BookingConfirmed() {
+
+  document.getElementById('ShowPersonName').innerHTML = document.getElementById("PersonName").value;
+  document.getElementById('ShowPersonMobile').innerHTML = document.getElementById("PersonMobile").value;
+  document.getElementById('ShowServiceAt').innerHTML = document.getElementById("ServiceAt").value;
+  document.getElementById('ShowService').innerHTML = document.getElementById("ServiceReg").value;
+  document.getElementById('ShowPrefTime').innerHTML = document.getElementById("PrefTime").value;
+
+   }
+
+ </script>
 
 <script>
   AOS.init();
