@@ -326,7 +326,7 @@
                       <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12" data-aos="slide-right" data-aos-duration="1500" style="background:white;border-radius:10px;box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);">
                            <div class="h2 text-left">Book Appointment</div>
 
-                          <form action="">
+                          <form action="" id="bookform">
                               <form class="form-inline">
                               <div class="form-group">
                               <label for="email">Name</label>
@@ -631,17 +631,26 @@
 </div>
 
 <script>
-function BookingConfirmed() {
 
+
+function BookingConfirmed() {
   document.getElementById('ShowPersonName').innerHTML = document.getElementById("PersonName").value;
   document.getElementById('ShowPersonMobile').innerHTML = document.getElementById("PersonMobile").value;
   document.getElementById('ShowServiceAt').innerHTML = document.getElementById("ServiceAt").value;
   document.getElementById('ShowService').innerHTML = document.getElementById("ServiceReg").value;
   document.getElementById('ShowPrefTime').innerHTML = document.getElementById("PrefTime").value;
-
-   }
-
+}
  </script>
+
+
+<script>
+
+$('#BookingModal').on('hidden.bs.modal', function () {
+  $('body').find('#bookform').trigger('reset');
+})
+
+</script>
+
 
 <script>
   AOS.init();
