@@ -10,6 +10,158 @@ html {
 
 body{
 font-family:'Aladin', cursive;
+height: 100%;
+margin: 0;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
+position: relative;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.bgimg-1 {
+background-image: url("gorgeous.github.io/img/llgb1.jpg");
+width: 100%;
+min-height: 500px;
+}
+
+.bgimg-2 {
+background-image: url('llgb2.jpg');
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-3 {
+background-image: url("../img/llgb3.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-4 {
+background-image: url("../img/llgb4.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-5 {
+background-image: url("../img/llgb5.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-6 {
+background-image: url("../img/llgb6.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-7 {
+background-image: url("../img/llgb7.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-8 {
+background-image: url("../img/llgb8.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+.bgimg-9 {
+background-image: url("../img/llgb9.jpg");
+width: 100%;
+min-height: 600px;
+}
+
+h3 {
+letter-spacing: 5px;
+text-transform: uppercase;
+font: 20px "Lato", sans-serif;
+color: #111;
+}
+
+.texts{
+  text-align: center;
+  color:white;
+  font-family:'Aladin', cursive;
+  font-size: 50px;
+  padding: 300px 0px;
+  -webkit-text-stroke: 2px black;
+}
+
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 9999; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none;
+  background:none;/* Remove outline */ /* Set a background color */
+  color: #e60068; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+
+@keyframes scroll_2 {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(.75em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+@keyframes scroll {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(1em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.scroll-icon__dot {
+  display: block;
+  position: absolute;
+  left: 40%;
+  background:#24dced;
+height: 15px;
+width: 15px;
+top: .6em;
+margin-left: -.25em;
+border-radius: 50%;
+transform-origin: top center;
+backface-visibility: hidden;
+animation: scroll 2s ease-out infinite;
+}
+
+
+.scroll-icon {
+display: block;
+position: relative;
+height: 75px;
+width: 50px;
+border: 5px solid #e60068;
+border-radius: 1.5em;
+
+}
+
+.page-wrap {
+display: flex;
+height: 60vh;
+}
+
+.example {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 [type=radio] {
@@ -554,4 +706,18 @@ overflow-x: hidden !important;
 .slider-small{
       display: block;
   }
+}
+@media screen and (min-width: 768px){
+  .small-only {
+    display: none!important;
+  }
+}
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 320px) {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
+  background-attachment: scroll;
+}
 }
