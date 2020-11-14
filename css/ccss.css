@@ -14,11 +14,13 @@ height: 100%;
 margin: 0;
 }
 
+
 [type=radio] {
-  background:none;
+  background:transparent !important;
   display:inline;
   align-self: flex-end;
-  z-index:99999;
+  outline: none;
+  z-index:999;
 }
 
 
@@ -146,6 +148,7 @@ margin-top:30px;
 
 .navbar{
 box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);
+z-index:9999;
 }
 
 #appointments{
@@ -285,7 +288,7 @@ left:35%;
   top:80px;
   height: 3px;
   background: none;
-  z-index: 99999;
+  z-index: 999;
 }
 
 #myBar{
@@ -297,6 +300,7 @@ background:#FF007F;
   height: 3px;
   background: #4caf50;
   width: 0%;
+  z-index:9999999;
 }
 
 .bookbtn-div{
@@ -485,9 +489,7 @@ justify-content: space-around;
 flex-wrap:wrap;
 }
 
-.modal-dialog{
-  padding: 60px 0px;
-}
+
 
 .bookingspans{
 font-weight: 500;

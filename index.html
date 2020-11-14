@@ -326,18 +326,17 @@
                       <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12" data-aos="slide-right" data-aos-duration="1500" style="background:white;border-radius:10px;box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);">
                            <div class="h2 text-left">Book Appointment</div>
 
-                          <form action="" id="bookform" class="book-form">
-                              <form class="form-inline">
+                            <form method="post" action="appointment.php" id="bookform" class="book-form">
+
                               <div class="form-group">
                               <label for="email">Name</label>
-                              <input type="text" class="form-control" id="PersonName">
+                              <input type="text" class="form-control" name="PersonName" id="PersonName" required="required">
                               <label for="mobile">Mobile</label>
-                              <input type="text" class="form-control" id="PersonMobile">
-                            </form>
+                              <input type="text" class="form-control" name="PersonMobile" id="PersonMobile" required="required">
                               </div>
                               <div class="form-group">
                                 <label for="service">Service at</label>
-                              <select class="form-control" id="ServiceAt">
+                              <select class="form-control" name="ServiceAt" id="ServiceAt">
                                        <option value="Salon Central Town">Salon Central Town</option>
                                        <option value="Salon Model Town">Salon Model Town</option>
                                        <option value="Home">Home</option>
@@ -345,7 +344,7 @@
                             </div>
                               <div class="form-group">
                               <label for="service">Service</label>
-                              <select class="form-control" id="ServiceReg">
+                              <select class="form-control" name="ServiceReg" id="ServiceReg">
                                        <option value="Bridal Makeover">Bridal Makeover</option>
                                        <option value="Hair Care">Hair Care</option>
                                        <option value="Makeup At Home">Makeup At Home</option>
@@ -356,7 +355,7 @@
                               </div>
                               <div class="form-group">
                               <label for="service">Prefered Time</label>
-                              <select class="form-control" id="PrefTime">
+                              <select class="form-control" name="PrefTime" id="PrefTime">
                                        <option value="Morning">Morning</option>
                                        <option value="Evening">Evening</option>
 
@@ -364,12 +363,9 @@
 
                               </div>
                               <div class="form-group bookbtn-div">
-                                 <button type="submit" class="btnbook" data-toggle="modal" data-target="#BookingModal" onclick="BookingConfirmed();">Book</button>
+                                <input type="submit" class="btnbook" name="Submit" value="Book" data-toggle="modal" data-target="#BookingModal" onclick="BookingConfirmed();">
                               </div>
-
                           </form>
-
-
            </div>
 
 
@@ -608,13 +604,14 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="text-center h3"><strong>Booking Confirmed  !<i class="fa fa-thumbs-o-up" style="color:#e60068;margin-left:10px;" aria-hidden="true"></i></strong></p>
+        <p class="text-center h3"><strong id="booking-title">!</strong></p>
 
         <p class="p-tags-booking">Thanks...<span id="ShowPersonName" class="bookingspans text-center"></span></p>
         <p class="p-tags-booking">We had received your booking for prefered time<span id="ShowPrefTime" Class="bookingspans"></span> of service<span id="ShowService" Class="bookingspans"></span> at<span id="ShowServiceAt" class="bookingspans"></span></p>
         <p class="text-center mt-2 p-tags-booking">Our associate will call you shortly on <span id="ShowPersonMobile" Class="bookingspans"></span></p>
-      </div>
 
+ 
+</div>
     </div>
 
   </div>
@@ -624,7 +621,7 @@
 <!--News Letter Modal -->
 
 <div id="Newsletter" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dailog-centered">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -666,11 +663,47 @@
 <script>
 
 function BookingConfirmed() {
-  document.getElementById('ShowPersonName').innerHTML = document.getElementById("PersonName").value;
-  document.getElementById('ShowPersonMobile').innerHTML = document.getElementById("PersonMobile").value;
-  document.getElementById('ShowServiceAt').innerHTML = document.getElementById("ServiceAt").value;
-  document.getElementById('ShowService').innerHTML = document.getElementById("ServiceReg").value;
-  document.getElementById('ShowPrefTime').innerHTML = document.getElementById("PrefTime").value;
+
+    var blanko = "Details Not Entered";
+    var NoService = "NA";
+    var BookSuccess = "Booking Confirmed";
+    var BookFail = "Booking Failed";
+
+  var Name = document.getElementById("PersonName").value;
+  var Mobile = document.getElementById("PersonMobile").value;
+  var ServiceAt = document.getElementById("ServiceAt").value;
+  var ServiceFor = document.getElementById("ServiceReg").value;
+  var PrefTime = document.getElementById("PrefTime").value;
+
+
+
+   if(!Name || !Mobile){
+  document.getElementById("ShowPersonName").innerHTML = blanko;
+  document.getElementById("ShowPersonMobile").innerHTML = blanko;
+  document.getElementById("ShowServiceAt").innerHTML = NoService;
+  document.getElementById("ShowService").innerHTML = NoService;
+  document.getElementById("ShowPrefTime").innerHTML = NoService;
+  document.getElementById("booking-title").innerHTML = BookFail ;
+  }
+
+   else{
+   document.getElementById("booking-title").innerHTML = BookSuccess ;
+   document.getElementById("ShowPersonName").innerHTML = Name;
+   document.getElementById("ShowPersonMobile").innerHTML = Mobile;
+   document.getElementById("ShowServiceAt").innerHTML = ServiceAt;
+   document.getElementById("ShowService").innerHTML = ServiceFor;
+   document.getElementById("ShowPrefTime").innerHTML = PrefTime;
+   }
+
+
+
+
+  // document.getElementById('ShowPersonName').innerHTML = document.getElementById("PersonName").value;
+  // document.getElementById('ShowPersonMobile').innerHTML = document.getElementById("PersonMobile").value;
+  // document.getElementById('ShowServiceAt').innerHTML = document.getElementById("ServiceAt").value;
+  // document.getElementById('ShowService').innerHTML = document.getElementById("ServiceReg").value;
+  // document.getElementById('ShowPrefTime').innerHTML = document.getElementById("PrefTime").value;
+
 }
 
 
@@ -694,6 +727,22 @@ $('#Newsletter').on('hidden.bs.modal', function () {
 })
 
 </script>
+
+<script>
+$(function() {
+    $('#bookform').on('submit', function(e) {
+        var data = $("#bookform :input").serialize();
+        $.ajax({
+            type: "POST",
+            url: "appointment.php",
+            data: data,
+        });
+        e.preventDefault();
+    });
+});
+
+</script>
+
 
 <script>
 
