@@ -150,7 +150,7 @@
 
 <section id="services" style="margin-top:100px;">
 <div class="container-fluid">
-    <div class="h1 text-center mx-5" data-aos="zoom-in" data-aos-duration="1000">Services...</div>
+    <div class="h1 text-center mx-5" data-aos="zoom-in" data-aos-duration="1000">Services...fuck</div>
                   <div class="services-box">
 
                             <div class="card" data-aos="zoom-in-right" data-aos-offset="120" data-aos-delay="5" data-aos-duration="1300" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="ture" data-aos-anchor-placement="top-bottom" id="servicecards">
@@ -564,13 +564,15 @@
              <i class="fa fa-mobile fa-3x" aria-hidden="true" style="color:black;"></i><h5>Franchisee: +91-9876543210</h5>
              <i class="fa fa-envelope-o fa-2x" aria-hidden="true" style="color:black;"></i><h5>info@gorgeous_salons.in</h5>
       </div>
-      <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7" id="address-div">
-            <div class="newsletter-div">
-                 <input type="email" name="email" placeholder="subscribe to our news letter" id="newsletter" data-aos="slide-left" data-aos-duration="1500" autocomplete="off"/>
+      <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 d-flex align-items-center" id="address-div">
 
-                   <button type="button" data-toggle="modal" data-target="#Newsletter" name="button" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000" onclick="NewsLetterEmail();">Subscribe</button>
+                <form method="post" id="nemailform" action="newsletteremail.php" class="d-flex flex-column justify-content-center w-100">
+                   <input type="text" placeholder="subscribe to our news letter" name="email_address" id="email_address" data-aos="slide-left" data-aos-duration="1500" autocomplete="off"/>
+                   <input type="submit" data-toggle="modal" data-target="#Newsletter" value="Subscribe" class="sbs-btn" data-aos="slide-left" data-aos-anchor-placement="top" data-aos-duration="2000" onclick="NewsLetterEmail();" />
+                 </form>
+      </div>
+</div>
 
-            </div>
       </div>
   </div>
 </div>
@@ -610,7 +612,7 @@
         <p class="p-tags-booking">We had received your booking for prefered time<span id="ShowPrefTime" Class="bookingspans"></span> of service<span id="ShowService" Class="bookingspans"></span> at<span id="ShowServiceAt" class="bookingspans"></span></p>
         <p class="text-center mt-2 p-tags-booking">Our associate will call you shortly on <span id="ShowPersonMobile" Class="bookingspans"></span></p>
 
- 
+
 </div>
     </div>
 
@@ -708,7 +710,7 @@ function BookingConfirmed() {
 
 
 function NewsLetterEmail(){
-document.getElementById('DisplayEmail').innerHTML = document.getElementById("newsletter").value;
+document.getElementById('DisplayEmail').innerHTML = document.getElementById("newslettere").value;
 }
 
 </script>
@@ -742,6 +744,23 @@ $(function() {
 });
 
 </script>
+
+<script>
+// $(function() {
+//     $('#nemailform').on('submit', function(f) {
+//         var edata = $("#nemailform :input").serialize();
+//         $.ajax({
+//             type: "POST",
+//             url: "newsletteremail.php",
+//             data: edata,
+//         });
+//         f.preventDefault();
+//     });
+// });
+
+</script>
+
+
 
 
 <script>

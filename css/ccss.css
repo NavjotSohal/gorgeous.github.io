@@ -146,10 +146,7 @@ box-shadow: 2px -1px 24px 0px rgba(0,0,0,0.75);
 margin-top:30px;
 }
 
-.navbar{
-box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);
-z-index:9999;
-}
+
 
 #appointments{
 font-family:'Aladin', cursive;
@@ -300,6 +297,7 @@ background:#FF007F;
   height: 3px;
   background: #4caf50;
   width: 0%;
+  box-shadow: -1px -1px 41px -3px rgba(0,0,0,0.75);
   z-index:9999999;
 }
 
@@ -318,7 +316,7 @@ justify-content:center;
 
 }
 
-#newsletter{
+#EmailAddress{
   top:40%;
   width:80%;
   outline:none;
